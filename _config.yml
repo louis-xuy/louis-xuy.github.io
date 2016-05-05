@@ -70,7 +70,7 @@ ga_domain: jianglife.com
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "人生如逆旅，我亦是行人。"
-sidebar-avatar: /img/avatar-louis.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-louis.JPG      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
