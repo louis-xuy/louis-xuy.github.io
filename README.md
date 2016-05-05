@@ -2,7 +2,7 @@
 
 ###[View Live louis Blog &rarr;](http://kaya33.github.io)
 
-![](http://jianglife.com/img/blog-desktop.jpg)
+![](http://jianglife.com/img/blog-desktop.png)
 
 
 ### "Page Build Warning" email
