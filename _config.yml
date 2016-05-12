@@ -262,6 +262,7 @@ mathjax:
 
 
 # Google Analytics
+<<<<<<< HEAD
 #google_analytics:
 
 # CNZZ count
@@ -382,3 +383,54 @@ images: images
 
 # Theme version
 version: 5.0.1
+=======
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: jianglife.com
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "人生如逆旅，我亦是行人。"
+sidebar-avatar: /img/avatar-louis.JPG      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+#friends: [
+#    {
+#        title: "前端外刊评论",
+#        href: "http://qianduan.guru/"
+#    },{
+#        title: "天镶的博客",
+#        href: "http://lingyu.wang/"
+#    },{
+#        title: "Luke的自留地",
+#        href: "http://hmqk1995.github.io"
+#    },{
+#        title: "Ebn's Blog",
+#        href: "http://ebnbin.com/"
+#    },{
+#        title: "SmdCn's Blog",
+#        href: "http://blog.smdcn.net"
+#    },{
+#        title: "解旻的博客",
+#        href: "http://xieminis.me/"
+#    },{
+#        title: "DHong Say",
+#        href: "http://dhong.co"
+#    },{
+#        title: "尹峰以为",
+#        href: "http://ingf.github.io/"
+#    },{
+#        title: "前端神盾局",
+#        href: "http://wepiaofei.github.io/blog/"
+#    }
+#]
+>>>>>>> ba75bc2d6396e485f0d8cdde25ea1971f81e72f4
