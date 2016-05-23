@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Hello 2015"
+title:      "Hello 2016"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
+date:       2015-06-23 12:00:00
+author:     "louis"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
@@ -15,7 +15,7 @@ tags:
 
 ## 前言
 
-louis 的 Blog 就这么开通了。
+终于下定决心开通blog了,作为一个伪程序员, Blog 这种东西都没有实在是太没意思了。
 
 [跳过废话，直接看技术实现 ](#build) 
 
@@ -25,13 +25,14 @@ louis 的 Blog 就这么开通了。
 
 ## 正文
 
+一心望着前方的目标,却忘了回头看看自己走的路,我希望以后能每个月完成一篇博客，用博客来记录自己的想法。
 
 ---
 
 
 ## 后记
 
-回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。
+回顾这个博客的诞生，纯粹是出于个人兴趣。
 
 
 —— louis 后记于 2016.5
