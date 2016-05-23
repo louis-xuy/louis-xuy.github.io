@@ -1,0 +1,34 @@
+---
+layout:     post
+title:      "Hello 2016"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2016-05-23 12:00:00
+author:     "louis"
+header-img: "img/post-bg-2016.jpg"
+catalog: true
+tags:
+    - 生活
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+louis 的 Blog 就这么开通了。
+
+[跳过废话，直接看技术实现 ](#build)
+
+
+
+2016 年,终于下定决心开始认真记录自己的生活和工作。
+
+
+作为一个， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。
+
+
+## 后记
+
+
+
+
