@@ -60,10 +60,10 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+ba_track_id: 4484f99e2eaca4eac6b73a360c7a2d20
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: louis.me
+ga_track_id: 'UA-78864108-1'            # Format: UA-xxxxxx-xx
+ga_domain: 'auto'
 
 
 
