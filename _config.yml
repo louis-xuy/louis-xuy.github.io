@@ -12,9 +12,9 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 # SNS settings
 RSS: false
-weibo_username:     360138359@qq.com
-zhihu_username:     xu-jiang-35-96
-github_username:    kaya33
+# weibo_username:     360138359@qq.com
+# zhihu_username:     xu-jiang-35-96
+github_username:   louis-xy
 #twitter_username:  louis
 facebook_username:  
 # linkedin_username:  firstname-lastname-idxxxx
@@ -41,9 +41,19 @@ gems: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+#markdown: kramdown
+#kramdown:
+#  input: GFM                            # use Github Flavored Markdown !important
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
 
 
 
@@ -51,19 +61,31 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: jianglife
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+#duoshuo_username: jianglife
+## Share component is depend on Comment so we can NOT use share only.
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+
+per_page: 10
+pagination_dir: archives
+
+archive_generator:
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4484f99e2eaca4eac6b73a360c7a2d20
-# Google Analytics
-ga_track_id: 'UA-78864108-1'            # Format: UA-xxxxxx-xx
-ga_domain: 'auto'
+#ba_track_id: 4484f99e2eaca4eac6b73a360c7a2d20
+## Google Analytics
+#ga_track_id: 'UA-78864108-1'            # Format: UA-xxxxxx-xx
+#ga_domain: 'auto'
 
 
 
@@ -71,8 +93,16 @@ ga_domain: 'auto'
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "走在一条开满了桃花的路上,云蒸霞蔚，前途似锦."
 sidebar-avatar: /img/avatar-louis.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+widgets:
+  - featured-tags
+  - short-posts
+  - friends-blog
 
 
+# widget behavior
+## Archive
+archive_type: 'monthly'
+show_count: true
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
