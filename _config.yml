@@ -88,6 +88,17 @@ archive_generator:
 #ga_domain: 'auto'
 
 
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://github.com/xCss/Valine
+valine:
+  enable: true
+  appid:  'HFrQhnJoI50wD02uSSXnDamQ-gzGzoHsz' # your leancloud application appid
+  appkey:  'SYQ0VIG5MCHlGtpKm8kA6HWK' # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Comment input placeholder
+
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -107,6 +118,8 @@ show_count: true
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
 
 
 
