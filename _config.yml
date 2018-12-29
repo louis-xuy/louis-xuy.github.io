@@ -93,10 +93,10 @@ archive_generator:
 # more info please open https://github.com/xCss/Valine
 valine:
   enable: true
-  appid:  'HFrQhnJoI50wD02uSSXnDamQ-gzGzoHsz' # your leancloud application appid
-  appkey:  'SYQ0VIG5MCHlGtpKm8kA6HWK' # your leancloud application appkey
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
+  appid:  HFrQhnJoI50wD02uSSXnDamQ-gzGzoHsz
+  appkey:  SYQ0VIG5MCHlGtpKm8kA6HWK
+  notify: false
+  verify: false
   placeholder: Comment input placeholder
 
 
