@@ -93,11 +93,14 @@ archive_generator:
 # more info please open https://github.com/xCss/Valine
 valine:
   enable: true
-  appid:  HFrQhnJoI50wD02uSSXnDamQ-gzGzoHsz
-  appkey:  SYQ0VIG5MCHlGtpKm8kA6HWK
+  app_id:  HFrQhnJoI50wD02uSSXnDamQ-gzGzoHsz
+  app_key:  SYQ0VIG5MCHlGtpKm8kA6HWK
   notify: false
   verify: false
-  placeholder: Comment input placeholder
+  placeholder: ヾﾉ≧∀≦)o 来呀！快活呀！~
+  avatar: mm # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  pageSize: 10 # pagination size
 
 
 # Sidebar settings
