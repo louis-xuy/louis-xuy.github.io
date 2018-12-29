@@ -186,6 +186,21 @@ layout: default
 </article>
 
 
+{% if site.valine_comment.enable %}
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    var valine = new Valine();
+    valine.init({
+        el:'#comment',
+        appId:'{{ site.valine.app_id }}',
+        appKey:'{{ site.valine.app_key }}',
+        placeholder:'{{ site.valine.placeholder }}',
+    })
+</script>
+<div id="comment"></div>
+{% endif %}
+
 
 {% if site.disqus_username %}
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
