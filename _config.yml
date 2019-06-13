@@ -6,7 +6,7 @@ email: xuj512@126.com
 description: "关于数据挖掘与算法 | 独孤小虾，data science | 这里是 @louis-独孤小虾 的个人博客，与你一起发现更大的世界。"
 keyword: "独孤小虾, louis-独孤小虾, louis, 独孤小虾的博客, louis Blog, 博客, 个人网站, 互联网, 数据分析, 数据挖掘, 算法"
 url: "http://jianglife.com"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "blog"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 

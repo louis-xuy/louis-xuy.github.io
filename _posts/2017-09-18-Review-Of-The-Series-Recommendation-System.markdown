@@ -35,7 +35,7 @@ tags:
 ###### 整体架构图
 
 
-   ![](../portfolio/images/short-video-strategy-flows.jpg)
+   ![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/short-video-strategy-flows.jpg)
 
    推荐系统整体架构包括基础层、模型层，算法层，组合层和应用层五层。
 
@@ -78,7 +78,7 @@ tags:
 
    * 内容特征计算
 
-        ![](../portfolio/images/content-feature.png)
+        ![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/content-feature.png)
 
         内容特征处理最大的问题就是高纬问题。即使去掉低频词和高报词等停用词后，维度依然很高。为了提高推荐系统的精度和效率，常常通过特征选择的办法进行降维
 
@@ -88,7 +88,7 @@ tags:
 
    * 用户特征计算
 
-        ![](../portfolio/images/user-profile.png)
+        ![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/user-profile.png)
 
         用户特征的计算主要是通过对用户行为进行分析。包活用户点击，收藏，点赞，结合用户基本属性，再进行后处理。再有要将特征值加以过滤，分配权重，结合衰减因子进行最终输出。最终输出的结果应该分为基本属性、用户兴趣、用户关系及用户行为，结合所有综合分析用户动机，在适时的时候推荐合适的内容从而形成推荐最佳化的最终目的，让用户最小成本的获取信息
 
