@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      "How to surf the internet"
+subtitle:   ""
+date:       2021-03-03 00:00:00
+author:     "louis"
+header-img: "img/year-book-plan.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - machine learning
+---
+
+
 > Mac oS
 
 Surge Mac 4
