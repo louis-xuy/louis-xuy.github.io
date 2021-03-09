@@ -11,9 +11,9 @@ tags:
     - machine learning
 ---
 
-# 常见机器学习评估指标
+# 常见机器学习问题
 
-### 分类评估指标详解
+### 评估指标详解
 
 ##### 准确率 – Accuracy
 
@@ -49,6 +49,33 @@ F1=(2×Precision×Recall)/（Precision+Recall）
 ROC 曲线中的主要两个指标就是真正率和假正率，上面也解释了这么选择的好处所在。其中横坐标为假正率（FPR），纵坐标为真正率（TPR），下面就是一个标准的ROC曲线图
     
 ![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/post-roc.png)
+
+##### AUC 计算
+
+随机挑选一个正样本以及负样本，算法将正样本排在负样本前面的概率就是AUC值。 M为正类样本的数目，N为负类样本的数目
+$$
+        AUC = \frac{\sum_{正样本}Rank_i-0.5*(M+1)*M}{M*N}
+$$
+
+```python
+def auc(labels, preds):
+    f = list(zip(preds, labels))
+    rank = [value2 for value1, value2 in sorted(f,key=lambda x:x[0])]
+    ranklist = [i+1 for i in range(len(rank)) if rank[i]==1]
+    postNum = 0
+    negNum = 0
+    for i in range(len(labels)):
+        postNum+=1
+    else:
+        negNum+=1
+    auc = 0
+    auc = (sum(ranklist)-postNum*(postNum+1)/2)/(postNum*negNum)
+    return auc
+
+```
+
+
+
     
 
     
