@@ -54,9 +54,10 @@ ROC 曲线中的主要两个指标就是真正率和假正率，上面也解释�
 ##### AUC 计算
 
 随机挑选一个正样本以及负样本，算法将正样本排在负样本前面的概率就是AUC值。 M为正类样本的数目，N为负类样本的数目
-$$
-        AUC = \frac{\sum_{正样本}Rank_i-0.5*(M+1)*M}{M*N}
-$$
+
+{% mathjax '{options}' %}
+AUC = \frac{\sum_{正样本}Rank_i-0.5*(M+1)*M}{M*N}
+{% endmathjax %}
 
 ```python
 def auc(labels, preds):
