@@ -62,16 +62,6 @@ layout: default
 
                 <hr>
 
-                <!--PC版-->
-                <div id="SOHUCS" ></div>
-                <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
-                <script type="text/javascript">
-                window.changyan.api.config({
-                appid: 'cyvltPfUG',
-                conf: 'prod_2d5cc760b38219d7fdf4c362fb26d8cd'
-                });
-                </script>
-
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -92,26 +82,15 @@ layout: default
                     {% endif %}
                 </ul>
 
-
-                {% if site.duoshuo_username %}
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="{{page.id}}"
-                        data-title="{{page.title}}"
-                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                {% endif %}
-
-                {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                {% endif %}
+                <!--PC版-->
+                <div id="SOHUCS" ></div>
+                <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                window.changyan.api.config({
+                appid: 'cyvltPfUG',
+                conf: 'prod_2d5cc760b38219d7fdf4c362fb26d8cd'
+                });
+                </script>
 
             </div>  
 

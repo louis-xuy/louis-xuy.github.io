@@ -55,6 +55,12 @@ markdown:
     typographer: true
     quotes: '“”‘’'
 
+math:
+  engine: 'mathjax'
+  mathjax:
+    src: custom_mathjax_source
+    config:
+      # MathJax config
 
 
 # Disqus settings

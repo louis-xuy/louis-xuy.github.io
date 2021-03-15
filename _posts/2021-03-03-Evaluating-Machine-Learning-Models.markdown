@@ -40,7 +40,7 @@ tags:
 > 召回率越高，代表实际坏用户被预测出来的概率越高
 
 ##### F1分数
-![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/post-precision-Recall.png)
+![](https://github.com/louis-xy/louis-xy.github.io/raw/master/img/post-precision-Recall.png)
     
 F1=(2×Precision×Recall)/（Precision+Recall）
 
@@ -48,7 +48,7 @@ F1=(2×Precision×Recall)/（Precision+Recall）
     
 ROC 曲线中的主要两个指标就是真正率和假正率，上面也解释了这么选择的好处所在。其中横坐标为假正率（FPR），纵坐标为真正率（TPR），下面就是一个标准的ROC曲线图
     
-![](https://github.com/Jaxon-xy/Jaxon-xy.github.io/raw/master/portfolio/images/post-roc.png)
+![](https://github.com/louis-xy/louis-xy.github.io/raw/master/img/post-roc.png)
 
 ##### AUC 计算
 
