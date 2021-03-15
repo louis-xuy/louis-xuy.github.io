@@ -7,6 +7,7 @@ author:     "louis"
 header-img: "img/year-book-plan.jpg"
 header-mask: 0.3
 catalog:    true
+mathjax: true
 tags:
     - machine learning
 ---
