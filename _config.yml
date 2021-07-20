@@ -1,24 +1,12 @@
 # Site settings
-title: Wblearn Blog
-SEOTitle: Wblearn的博客 | Wblearn Blog
+title: Louis Blog
+SEOTitle: Louis | Louis Blog
 header-img: img/home-bg-art.jpg
-email: 1275660493@qq.com
-description: "@wblearn,不要让任何事情成为你不去学习的理由！"
-keyword: "wblearn, @wblearn, wblearn的博客,wblearn Blog, 博客, 个人网站, 互联网"
-url: "http://wblearn.github.io/"              # your host, for absolute URL
+email: 360138359@qq.com
+description: "@louis,不要让任何事情成为你不去学习的理由！"
+keyword: "louis, @louis, louis,louis Blog, 博客, 个人网站, 互联网"
+url: "http://jianglife.com/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
-
-
-
-# SNS settings
-RSS: false
-weibo_username:     wudalanggd
-csdn_username:     wudalang_gd
-github_username:    wblearn
-#twitter_username:  wblearn
-jianshu_username:  48599dc7ef1b
-sv_username: study-video
-# linkedin_username:  firstname-lastname-idxxxx
 
 
 
@@ -52,9 +40,9 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: wblearnblog
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+#duoshuo_username: wblearnblog
+## Share component is depend on Comment so we can NOT use share only.
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
 # LiveRe setttings
@@ -64,6 +52,10 @@ livere_uid: MTAyMC8yODkzOC81NTA3
 # Analytics settings
 # Baidu Analytics 
 # ba_track_id: [your track id]
+
+# changyan
+changyan_id: cyvltPfUG
+changyan_conf: b279931d9c30999cc5b6a05b499ea343
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
@@ -110,12 +102,12 @@ defaults:
       layout: video
 
 # Friends
-friends: [
-    {
-        title: "wblearn的微博",
-        href: "http://weibo.com/wudalanggd"
-    },{
-        title: "study video",
-        href: "https://wblearn.github.io/study-video"
-    }
-]
+#friends: [
+#    {
+#        title: "wblearn的微博",
+#        href: "http://weibo.com/wudalanggd"
+#    },{
+#        title: "study video",
+#        href: "https://wblearn.github.io/study-video"
+#    }
+#]
