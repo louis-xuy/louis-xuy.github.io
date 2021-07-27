@@ -35,9 +35,23 @@ XGBoost被广泛应用于机器学习领域。
 
 XGBoost的可以使用Regression Tree（CART）作为基学习器，也可以使用线性分类器作为基学习器。以CART作为基学习器时，其决策规则和决策树是一样的，但CART的每一个叶节点具有一个权重，也就是叶节点的得分或者说是叶节点的预测值。CART的示例如下图：
 
-![](https://github.com/louis-xy/louis-xy.github.io/blob/master/img/timeseries_xgboost/xgb.png)
+![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/timeseries_xgboost/xgb.png)
 
 图中为两颗回归树（左右两个），其中树下方的输出值即为叶节点的权重（得分），当输出一个样本进行预测时，根据每个内部节点的决策条件进行划分节点，最终被划分到的叶节点的权重即为该样本的预测输出值。
 
-XGBoost的模型XGBoost模型的定义为：给定一个包含n个样本m个特征的数据集 $ |D| = {(x_1, y_1), (x_2, y_2)...(x_n, y_n)} $ ，集成模型的预测输出表示为:
-$\hat{y_i}=\phi(x_i)=\sum_{k=1}_{K}f_k(x_i)$    (1)
+XGBoost的模型XGBoost模型的定义为：给定一个包含n个样本m个特征的数据集 $|D| = {(x_1, y_1), (x_2, y_2)...(x_n, y_n)}$ ，集成模型的预测输出表示为:
+$\hat{y_i}=\sum_{k=1}^{K}f_k(x_i)$    (1)
+
+其中$f_k$表示第k颗回归树，K为回归树的数量，整个式（1）表示给定一个输入$x_i$输出值为K颗回归树的预测值。
+
+##### 模型学习
+
+通常情况下，怎样去学习一个模型？
+
+定义目标函数，即损失函数以及正则项。
+优化目标函数。
+按照这个套路，第一步定义XGBoost的目标函数。
+
+ $L(\phi) = \sum_{k}\iota(\hat{y_i}, y_i) + \sum_{k}\Omega(f_k)$  (2)
+
+ 
