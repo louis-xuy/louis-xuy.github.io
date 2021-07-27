@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08caf7e0-45ae-43d0-a828-d4f67d599ec0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -706,7 +707,7 @@
       <workItem from="1505698845565" duration="76000" />
       <workItem from="1505699028949" duration="1761000" />
       <workItem from="1626760743950" duration="5676000" />
-      <workItem from="1627347881294" duration="4035000" />
+      <workItem from="1627347881294" duration="5198000" />
     </task>
     <servers />
   </component>
