@@ -4,41 +4,6 @@
     <list default="true" id="08caf7e0-45ae-43d0-a828-d4f67d599ec0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/about-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/avatar-hux.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/avatar-sea-hux.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/blog-keynote.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/blog-md-navbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/blog-sidebar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icon_wechat1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/forcify.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/open-source-license.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.016.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.018.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.020.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.021.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.023.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.028.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.029.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.030.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-alitrip-pd/post-alitrip-pd.031.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-c-u-ali-079717.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-c-u-ali-memo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-c-u-ali-team.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-js-version/keep-calm-and-learn-javascript.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-kuaidi-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-kuaidi-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-metro-panorama.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-metro-real.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/post-metro-ui.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/post-bg-alibaba.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/post-bg-see-u-ali.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -741,7 +706,7 @@
       <workItem from="1505698845565" duration="76000" />
       <workItem from="1505699028949" duration="1761000" />
       <workItem from="1626760743950" duration="5676000" />
-      <workItem from="1627347881294" duration="6320000" />
+      <workItem from="1627347881294" duration="6976000" />
     </task>
     <servers />
   </component>
