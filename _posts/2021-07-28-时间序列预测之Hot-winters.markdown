@@ -31,13 +31,14 @@ $s_i$ 表示第$i$时刻的平滑估计，$s_i$可表示为当前实际值$x_i$�
 
 ![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_hotwinters/gongshi.png)
 
-形式和泰勒展开式相似。$alpha \epsilon [0, 1]$, 越大表示近期的数据影响更大
+形式和泰勒展开式相似。$\alpha \epsilon [0, 1]$, 越大表示近期的数据影响更大
 
 ##### 二次指数平滑
 
 一次指数平滑，没有考虑时间序列的趋势和季节性，二次指数平滑在一次指数平滑的基础上增加了趋势因素。预测公式如下：
 
 $$s_i = \alpha x_i + (1- \alpha )(s_{i-1} + t_{i-1})$$
+
 $$t_i = \beta (s_i - s_{i-1}) + (1-\beta )t_{i-1}$$
 
 从公式可知，一个时间序列的时刻值分解为baseline部分和趋势部分，t表示趋势，可以表示为连续两个时刻的差值；可知，$t_i$也是一次的指数平滑。
@@ -47,7 +48,9 @@ $$t_i = \beta (s_i - s_{i-1}) + (1-\beta )t_{i-1}$$
 在二次指数平滑基础上，考虑季节性因素，就是三次指数平滑，也就是Holt-Winters。由此，一个时间序列的时刻值分解为baseline部分和趋势部分以及季节部分。由于季节性，存在周期，比如按周，按月等。pi季节性为当前季节性值和上一个周期季节性估计值的加权组合，周期在公式中以k来表示。如下：
 
 $$s_i = \alpha (x_i - p_i) + (1-a)(s_{i-1} + t_{i-1})$$
+
 $$t_i = \beta(s_i - s_{i-1}) + (1-\beta)t_{i-1}$$
+
 $$p_i = \gamma(x_i - s_i) + (1-\gamma)p_{i-k}$$
 
 
