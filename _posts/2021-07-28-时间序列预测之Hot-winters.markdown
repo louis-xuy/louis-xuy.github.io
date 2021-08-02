@@ -203,8 +203,12 @@ class HoltWintersModel():
 
 本文介绍了时间序列预测算法Holt-Winters以及重要参数的选择的过程。总结如下：
 
-    - Holt-Winters是三次指数平滑，分别为baseline，趋势和季节性；
-    - alpha、beta和gamma分别为baseline，趋势和季节性的指数加权参数，一般通过优化算法L-BFGS估计
-    - 初始化可通过平均值，也可通过时间序列分解得到
-    - 周期m或者k的选择要根据实际数据来选择
-    - Holt-Winters针对波形比较稳定，没有突刺的情况下，效果会比较好
+- Holt-Winters是三次指数平滑，分别为baseline，趋势和季节性；
+
+- alpha、beta和gamma分别为baseline，趋势和季节性的指数加权参数，一般通过优化算法L-BFGS估计
+
+- 初始化可通过平均值，也可通过时间序列分解得到
+
+- 周期m或者k的选择要根据实际数据来选择
+
+- Holt-Winters针对波形比较稳定，没有突刺的情况下，效果会比较好
