@@ -58,9 +58,9 @@ $$p_i = \gamma(x_i - s_i) + (1-\gamma)p_{i-k}$$
 
 从上面可以知道，要实现Holt-Winters，必须确定：
 
-•初始值：s0，t0和p0
-•合适的参数：alpha，beta， gamma
-•套入公式即可完成预测
+    1. 初始值：s0，t0和p0
+    2. 合适的参数：alpha，beta， gamma
+    3. 套入公式即可完成预测
 
 三个重要参数：alpha，beta， gamma都属于[0, 1]之间，要么人为的搜索，要么通过数据来估计，通常采用L-BFGS优化算法来拟合数据。优化算法来自包scipy.optimize的fmin_l_bfgs_b。
 
