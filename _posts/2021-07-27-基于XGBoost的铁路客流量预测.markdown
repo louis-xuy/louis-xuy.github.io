@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于XGBoost的铁路客流量预测"
 subtitle:   ""
-date:       2017-09-18 00:00:00
+date:       2021-07-01 00:00:00
 author:     "louis"
 header-img: "img/year-book-plan.jpg"
 header-mask: 0.3
