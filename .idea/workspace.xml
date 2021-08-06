@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08caf7e0-45ae-43d0-a828-d4f67d599ec0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-07-27-基于XGBoost的铁路客流量预测.markdown" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +177,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -706,7 +706,7 @@
       <workItem from="1505698845565" duration="76000" />
       <workItem from="1505699028949" duration="1761000" />
       <workItem from="1626760743950" duration="5676000" />
-      <workItem from="1627347881294" duration="20304000" />
+      <workItem from="1627347881294" duration="21496000" />
     </task>
     <servers />
   </component>
