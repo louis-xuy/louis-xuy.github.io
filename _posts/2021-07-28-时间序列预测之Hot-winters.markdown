@@ -15,7 +15,7 @@ tags:
 
 在生活中，常常要根据过去一段时间的数据进行预测，确定业务未来的发展趋势，进而决策,配置相关的营销策略、制定业务目标，由此引申出了一个重要的用数据预测未来的方法——时间序列分析。时间序列预测算法的数据形式以[时间, 观测值]的形式表现。如下图
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_hotwinters/timeseries.jpg)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_hotwinters/timeseries.jpg)
 
 今天要说到Holt-Winters是利用三次指数平滑来做时间序列预测的方法。Holt-Winters是综合了1957年Holt和1960年Winters两个人的思路的一种方法。在介绍Holt-Winters之前，我们先来了解一下一次指数平滑和二次指数平滑。
 
@@ -29,7 +29,7 @@ $$s_i = \alpha x_i + (1-\alpha )s_{i-1}$$
 
 $s_i$ 表示第$i$时刻的平滑估计，$s_i$可表示为当前实际值$x_i$和前一时刻的平滑估计值$s_{i-1}$加权求和，权重由$\alpha$决定。将上述公式展开如下：
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_hotwinters/gongshi.png)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_hotwinters/gongshi.png)
 
 形式和泰勒展开式相似。$\alpha \epsilon [0, 1]$, 越大表示近期的数据影响更大
 

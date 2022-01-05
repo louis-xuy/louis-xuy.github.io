@@ -35,7 +35,7 @@ XGBoost被广泛应用于机器学习领域。
 
 XGBoost的可以使用Regression Tree（CART）作为基学习器，也可以使用线性分类器作为基学习器。以CART作为基学习器时，其决策规则和决策树是一样的，但CART的每一个叶节点具有一个权重，也就是叶节点的得分或者说是叶节点的预测值。CART的示例如下图：
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/xgb.png)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/xgb.png)
 
 图中为两颗回归树（左右两个），其中树下方的输出值即为叶节点的权重（得分），当输出一个样本进行预测时，根据每个内部节点的决策条件进行划分节点，最终被划分到的叶节点的权重即为该样本的预测输出值。
 
@@ -66,11 +66,11 @@ $\hat{y_i}=\sum_{k=1}^{K}f_k(x_i)$    (1)
 
 如图4所示，周六客流人数在一周中最高，周五其次，其他无显著差异。进一步分析节假日对客流的影响情况，如图5所示，节假日相比工作日客流人数有明显的增加，节假日前一天的客流人数不仅显著高于工作日的客流人数，并且略高于假期的平均客流人数，
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/week_analysis.jpg)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/week_analysis.jpg)
 
 以月份为单位观察发现，因受暑假以及适宜的天气影响，夏季8月份的客流规模高于同期其他月份，而在天气最寒冷的二月客流规模相对最低。
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/month_analysis.jpg)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/month_analysis.jpg)
 
 ### 试验结果
 
@@ -84,4 +84,4 @@ $\hat{y_i}=\sum_{k=1}^{K}f_k(x_i)$    (1)
 
 最后预处理后的有监督数据集输入列数为36列，输出列数为1列。考虑到样本容量较小，在模型训练阶段，采用了k折交叉验证进行训练，提升模型的性能，本文取k=5
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/rst.jpg)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/timeseries_xgboost/rst.jpg)

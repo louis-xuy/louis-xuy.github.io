@@ -55,7 +55,7 @@ $$
 
 上述过程的一次迭代不能保证$h_1$是本征模函数(IMF)，需要重复上述过程，直到$h_1$是本征模函数(IMF)
 
-![](https://raw.githubusercontent.com/louis-xy/louis-xy.github.io/master/img/in-post/emd/emd_0.png)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/emd/emd_0.png)
 
 
 ### 停止准则
