@@ -1,0 +1,55 @@
+---
+layout:     post
+title:      "NBEATS算法研究笔记"
+subtitle:   ""
+date:       2021-12-31 00:00:00
+author:     "louis"
+header-img: "img/year-book-plan.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - 时间序列, N-BEATS
+---
+
+# [研究笔记] N-BEATS: 用于可解释性的时间序列预测
+
+> 题目:
+     N-BEATS: Neural basis expansion analysis for interpretable time series forecasting
+作者:
+    Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio
+文档链接：
+    https://link.zhihu.com/?target=https%3A//openreview.net/pdf%3Fid%3Dr1ecqn4YwB
+代码:
+    https://link.zhihu.com/?target=https%3A//github.com/amitesh863/nbeats_forecast
+
+
+## 摘要
+
+这篇论文将纯深度学习技术应用于时间序列预测，并在测试数据集上取得了比传统的时间序列分析方法还要好的效果。
+并参考多项式回归拟合趋势的思想，设计了一个可以模拟多项式回归的网络结构。模仿周期编码的线性回归完成Seasonal的预测。
+
+
+## N-BEATS结构
+
+> N-BEATS 模型基于后向和前向残差链接以及非常深的全连接层堆栈。我们的架构设计方法依赖于一些关键原则。首先，基础架构应该是简单和通用的，但具有表现力（深度）。其次，架构不应依赖于特定于时间序列的特征工程或输入缩放。这些先决条件让我们探索纯 DL 架构在 TS 水平划分中的潜力。最后，作为探索可解释性的先决条件，架构应该是可扩展的，使其输出可被人类解释。我们现在讨论这些原则如何融合到提议的架构中。
+
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post//网络结构图.png)
+
+
+## generic architecture
+通用的block结构
+
+## interpretable architecture：
+可解释的block结构
+
+
+### trend部分：
+$$\widehat{y}_{s,l} = \sum_{i=1}^{p}\theta^{f}_{s,l,i}t_{i}$$
+
+### Seasonal部分
+借鉴统计学模型中通过多项式回归拟合趋势。
+
+
+### 参考资料
+
+https://www.kaggle.com/gatandubuc/forecast-with-n-beats-interpretable-model

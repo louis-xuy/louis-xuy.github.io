@@ -35,7 +35,7 @@ tags:
 ###### 整体架构图
 
 
-   ![](https://github.com/louis-xy/louis-xy.github.io/raw/master/portfolio/images/short-video-strategy-flows.jpg)
+   ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/recommendation/frame.png/)
 
    推荐系统整体架构包括基础层、模型层，算法层，组合层和应用层五层。
 
