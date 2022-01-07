@@ -14,12 +14,6 @@ tags:
 > 题目:
 >     N-BEATS: Neural basis expansion analysis for interpretable time series forecasting
 >
-> 作者:
->    Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio
->
-> 文档链接：
->    https://link.zhihu.com/?target=https%3A//openreview.net/pdf%3Fid%3Dr1ecqn4YwB
->
 >代码:
 >    https://link.zhihu.com/?target=https%3A//github.com/amitesh863/nbeats_forecast
 
