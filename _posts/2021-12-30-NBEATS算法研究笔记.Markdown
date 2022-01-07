@@ -4,7 +4,7 @@ title:      "NBEATS算法研究笔记"
 subtitle:   ""
 date:       2021-12-31 00:00:00
 author:     "louis"
-header-img: "img/year-book-plan.jpg"
+header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
