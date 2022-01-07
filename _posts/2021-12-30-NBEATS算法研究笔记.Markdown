@@ -12,15 +12,16 @@ tags:
 ---
 
 > 题目:
-     N-BEATS: Neural basis expansion analysis for interpretable time series forecasting
-作者:
-    Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio
-
-文档链接：
-    https://link.zhihu.com/?target=https%3A//openreview.net/pdf%3Fid%3Dr1ecqn4YwB
-
-代码:
-    https://link.zhihu.com/?target=https%3A//github.com/amitesh863/nbeats_forecast
+>     N-BEATS: Neural basis expansion analysis for interpretable time series forecasting
+>
+> 作者:
+>    Boris N. Oreshkin, Dmitri Carpov, Nicolas Chapados, Yoshua Bengio
+>
+> 文档链接：
+>    https://link.zhihu.com/?target=https%3A//openreview.net/pdf%3Fid%3Dr1ecqn4YwB
+>
+>代码:
+>    https://link.zhihu.com/?target=https%3A//github.com/amitesh863/nbeats_forecast
 
 
 ## Summary
@@ -28,15 +29,19 @@ tags:
 作者提出了一个纯深度学习的模型，用来预测时间序列，在时序竞赛数据上有较好的结果。同时具有一定的可解释性。
 
 ## Research Objective
-使用深度学习来解决单变量时间序列点预测问题
+1. 准确性：较高=> 高（显著、稳定地高于LGB）
+2. 稳定性：低=> 高（达到统计方法的水准）
+3. 可调整性： 高（特征、超参、模型结构、训练策略）
+4. 可解释性：低=> 较高（一定的白盒化能力）
+5. 执行效率：低=> 高（严格控制模型规模）
 
 ## Problem Statement
-输入的是过去一段时间的数据，预测未来一段时间的数据
+单变量预测，输入的是过去一段时间的数据，预测未来一段时间的数据。虽然作者在文中使用的是单变量预测的结构，但是貌似网上已经有可以增加附加变量的开源实现。
 
 
 ## Method(s)
 
-nbeats模型由若干个stack构成，各个stack的结果相加得到最终预测结果；每个stack又有许多block组成，每个block会向前和向后预测，向前预测(Forecast)的结果会加起来计算最终预测结果， 向后预测(Backcast)的结果会和原始信号相见，然后作为下一个block的输入。通过这种方法，可以先预测比较明显的pattern， 之后再预测升下的部分
+nbeats模型由若干个stack构成，各个stack的结果相加得到最终预测结果；每个stack又有许多block组成，每个block会向前和向后预测，向前预测(Forecast)的结果会加起来计算最终预测结果， 向后预测(Backcast)的结果会和原始信号相减，然后作为下一个block的输入。通过这种方法，可以先预测比较明显的pattern， 之后再预测剩下的部分
 
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/网络结构图.png)
 
@@ -92,7 +97,7 @@ $g^b_l$, $g^f_l$ 即可以是学习出来的参数，也可以是人为设计出
 
 作者基于M3，M4，Tourism数据对比了一系列的模型。基于N-Beats-l+G的效果最好(**还是需要ensembling**), 作者在Ensemble中对不同的模型使用不同的 loss function、horizon和样本（bagging）
 
-* 不同stack的对比。标记为G的模型，属于正常的stack， 标记为l的则是指定g函数的stack(模拟周期和趋势)具有一定的解释性. 从下图也可以看出来,N-Beats可以学习出时间序列的趋势和周期。
+不同stack的对比。标记为G的模型，属于正常的stack， 标记为l的则是指定g函数的stack(模拟周期和趋势)具有一定的解释性. 从下图也可以看出来,N-Beats可以学习出时间序列的趋势和周期。
 
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/stack.png)
 
@@ -105,7 +110,3 @@ $g^b_l$, $g^f_l$ 即可以是学习出来的参数，也可以是人为设计出
 
 ## Notes
 在这些框架外额外需要记录的笔记。
-
-### 参考资料
-
-https://www.kaggle.com/gatandubuc/forecast-with-n-beats-interpretable-model
