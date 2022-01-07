@@ -67,7 +67,7 @@ $$
 
 
 ## 可解释性：
-$g^b_l$, $g^f_l$ 即可以是学习出来的参数，也可以是人为设计出的能反映周期或趋势的函数。这样模型的预测就具有一定的可解释性。(<font color=red>这是设计了两个滤波器吗，将符合规律的数据顾虑出来？？？</font>)
+$g^b_l$, $g^f_l$ 即可以是学习出来的参数，也可以是人为设计出的能反映周期或趋势的函数。这样模型的预测就具有一定的可解释性。(<font color=red>这是设计了两个滤波器吗？将符合规律的数据过滤出来？？？</font>)
 
 论文中作者在stack模块中设计了特定的g函数模拟趋势和季节性分解，以使模型更容易解释
 
@@ -93,20 +93,22 @@ $g^b_l$, $g^f_l$ 即可以是学习出来的参数，也可以是人为设计出
 趋势和周期性的预测可作为单独的可解释输出(分别对趋势项stack和周期性stack求和即可)
 
 
-## 实验结果
+## Results
 
-作者基于M3，M4，Tourism数据对比了一系列的模型。基于N-Beats-l+G的效果最好(**还是需要ensembling**), 作者在Ensemble中对不同的模型使用不同的 loss function、horizon和样本（bagging）
+作者基于对比了一系列的模型。基于N-Beats-l+G的效果最好(**还是需要ensembling**), 作者在Ensemble中对不同的模型使用不同的 loss function、horizon和样本（bagging）
 
-不同stack的对比。标记为G的模型，属于正常的stack， 标记为l的则是指定g函数的stack(模拟周期和趋势)具有一定的解释性. 从下图也可以看出来,N-Beats可以学习出时间序列的趋势和周期。
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/metrics.png)
+
+顺便看一下不同stack的对比。标记为G的模型，属于正常的stack， 标记为l的则是指定g函数的stack(模拟周期和趋势)具有一定的解释性. 从下图也可以看出来,N-Beats可以学习出时间序列的趋势和周期。
 
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/stack.png)
 
 
 ## Evaluation
-作者如何评估自己的方法，有没有问题或者可以借鉴的地方。
+
 
 ## Conclusion
-作者给了哪些strong conclusion, 又给了哪些weak conclusion?
 
-## Notes
-在这些框架外额外需要记录的笔记。
+作者认为：
+1. 该模型对于单变量的时序预测通用，可解释。
+2. 模型是一种元学习的形式
