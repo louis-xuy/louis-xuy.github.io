@@ -73,7 +73,7 @@ $$y_t = y_t - \delta$$
 ## 实验结果
 先看一下不同stack的作用。标记为G的模型，属于一般的stack， 标记为l的则是指定g函数的stack
 
-![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/stack.jpg)
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/stack.png)
 
 ## Evaluation
 作者如何评估自己的方法，有没有问题或者可以借鉴的地方。
