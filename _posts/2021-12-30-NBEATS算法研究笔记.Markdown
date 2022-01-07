@@ -11,8 +11,6 @@ tags:
     - 时间序列, N-BEATS
 ---
 
-# [研究笔记] N-BEATS: 用于可解释性的时间序列预测
-
 > 题目:
      N-BEATS: Neural basis expansion analysis for interpretable time series forecasting
 作者:
@@ -23,47 +21,68 @@ tags:
     https://link.zhihu.com/?target=https%3A//github.com/amitesh863/nbeats_forecast
 
 
-## 摘要
+## Summary
 
-这篇论文将纯深度学习技术应用于时间序列预测，并在测试数据集上取得了比传统的时间序列分析方法还要好的效果。
-并参考多项式回归拟合趋势的思想，设计了一个可以模拟多项式回归的网络结构。模仿周期编码的线性回归完成Seasonal的预测。
+作者提出了一个纯深度学习的模型，用来预测时间序列，在时序竞赛数据上有较好的结果。同时具有一定的可解释性。
+
+## Research Objective
+使用深度学习来解决单变量时间序列点预测问题
+
+## Problem Statement
+输入的是过去一段时间的数据，预测未来一段时间的数据
 
 
-## N-BEATS模型结构
+## Method(s)
 
-> N-BEATS 模型基于后向和前向残差链接以及非常深的全连接层堆栈。我们的架构设计方法依赖于一些关键原则。首先，基础架构应该是简单和通用的，但具有表现力（深度）。其次，架构不应依赖于特定于时间序列的特征工程或输入缩放。这些先决条件让我们探索纯 DL 架构在 TS 水平划分中的潜力。最后，作为探索可解释性的先决条件，架构应该是可扩展的，使其输出可被人类解释。我们现在讨论这些原则如何融合到提议的架构中。
+nbeats模型由若干个stack构成，各个stack的结果相加得到最终预测结果；每个stack又有许多block组成，每个block会向前和向后预测，向前预测(Forecast)的结果会加起来计算最终预测结果， 向后预测(Backcast)的结果会和原始信号相见，然后作为下一个block的输入。通过这种方法，可以先预测比较明显的pattern， 之后再预测升下的部分
 
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/网络结构图.png)
 
+每个block的计算过程：
+$$h_{l,1}=FC_{l,1}(x_l)$$
+$$h_{l,2}=FC_{l,2}(h_{l,1})$$
+$$h_{l,3}=FC_{l,3}(h_{l,2})$$
+$$h_{l,4}=FC_{l,4}(h_{l,3})$$
+$$\theta^b_l=Linear^b_l(h_{l,4})$$
+$$\theta^f_l=Linear^f_l(h_{l,4})$$
 
-## generic architecture
-通用的block结构
+接下来，将forecast和backcast预测的结果$\theta$, 结合$g$，即可得到最终结果.
+
 
 ## 可解释性：
+$g^b_l$, $g^f_l$ 即可以是选着学习出来，也可以指定能反映周期或趋势的函数。
 
-可解释的block结构，预测模型人员经常会用诸如ARIMA模型等将时间序列分解长趋势和季节性。在N-BEATS中，通过在stack模块中设计模拟趋势和季节性分解，以使模型更容易解释
+论文中作者在stack模块中设计了特定的g函数模拟趋势和季节性分解，以使模型更容易解释
 
-### 趋势模型
-
-借鉴统计学模型中通过多项式回归拟合趋势
+- 趋势：借鉴统计学模型中通过多项式回归拟合趋势的方法
 $$\widehat{y}_{s,l} = \sum_{i=1}^{p}\theta^{f}_{s,l,i}t_{i}$$
 其中向量$t$为：
 $$t=[0,1,2,...,H-2,H-1]^T / H$$
 H是预测窗口的长度
 
 
-### 周期模型
-
-周期性的典型特征他是一个有规律的循环反复出现的波动
+- 周期：周期性的典型特征他是一个有规律的循环反复出现的波动
 为了模拟周期性，模型限定 $g^b_{s}l$ 和$g^f_{s}l$ 属于一类周期函数，即：
 $$y_t = y_t - \delta$$
-其中$\delta$ 是周期。
+其中$\delta$ 是周期。在文章中作者使用了周期函数
 
-### 整体可解释结构
+
 整个可解释性有两个stack构成：趋势stack，周期性stack
-- 趋势成分在输入到周期性stack之前移除
-- 趋势和周期性的预测可作为单独的可解释输出
+趋势和周期性的预测可作为单独的可解释输出(分别对趋势项stack和周期性stack求和即可)
 
+## 实验结果
+先看一下不同stack的作用。标记为G的模型，属于一般的stack， 标记为l的则是指定g函数的stack
+
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/n-beats/stack.jpg)
+
+## Evaluation
+作者如何评估自己的方法，有没有问题或者可以借鉴的地方。
+
+## Conclusion
+作者给了哪些strong conclusion, 又给了哪些weak conclusion?
+
+## Notes
+在这些框架外额外需要记录的笔记。
 
 ### 参考资料
 
