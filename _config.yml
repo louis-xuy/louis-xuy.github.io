@@ -19,6 +19,10 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","READM
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
+favicon:
+  small: /img/favicon.ico
+  medium: /img/favicon.ico
+
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
