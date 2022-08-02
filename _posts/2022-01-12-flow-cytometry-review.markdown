@@ -1,5 +1,17 @@
-flowPeaks 算法过程
-===================
+---
+layout:     post
+title:      "flowPeaks 算法过程"
+mathjax:    true
+subtitle:   ""
+date:       2021-12-31 00:00:00
+author:     "louis"
+header-img: "img/post-bg-rwd.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - cluster
+---
+
 1. 在数据的每个维度中应用Freedman Diaconis公式，以获得K-均值的聚类数K
     $$
         K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d

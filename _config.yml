@@ -29,6 +29,10 @@ favicon:
 gems: [jekyll-paginate]
 
 
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: true
 
 # Markdown settings
 # replace redcarpet to kramdown,
