@@ -14,16 +14,12 @@ tags:
 
 ### 在数据的每个维度中应用Freedman Diaconis公式，以获得K-均值的聚类数K
 
-$$
-K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d
-$$
+$$ K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d $$
 
 其中$x_{(n)}^{j}$, $x_{(1)}^{j}$ 表示第j个维度的最大值和最小值。$x^j=\left(x^i_{1},x^j_{2} \text , \ldots, x^j_{n}\right)$.   
 IQR（·）是数据的四分位范围，定义为第75百分位和第25百分位之间的差异 
 
-$$
-K=\left\lceil\operatorname{median}\left(K_{1}, \ldots, K_{d}\right)\right\rceil
-$$
+$$ K=\left\lceil\operatorname{median}\left(K_{1}, \ldots, K_{d}\right)\right\rceil $$
 
 ### 使用k-means++算法初始化最初的k个聚类种子, 
 
