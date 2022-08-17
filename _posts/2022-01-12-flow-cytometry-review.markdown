@@ -50,9 +50,7 @@ $ \lambda_{k}=nw_{k}/\left(k+nw_{k}\right) $,
 $ \Sigma_{0} $ 是一个方差矩阵，假设数据在整个数据范围内均匀分布，并且是一个对角线矩阵，对于元素(j,j)有: $ \Sigma^{jj}_{0}=\{(x^j_{(n)}-x^{j}_{(1)})/k^{1/d}\}^2  \text { for }j=1, \ldots, d $ 
 
 ### 基于高斯有限混合模型生成的密度函数，计算从中心$\mu_k，k=1,\ldots,k$开始的局部峰值。
-$$
-f(x)=\sum_{k=1}^{K} w_{k} \cdot \phi\left(x ; \mu_{k}, \Sigma_{k}\right)
-$$
+$$ f(x)=\sum_{k=1}^{K} w_{k} \cdot \phi\left(x ; \mu_{k}, \Sigma_{k}\right) $$
 
 ### 应用附录中的算法A2分层合并峰值。
 
