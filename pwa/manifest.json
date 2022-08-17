@@ -1,13 +1,13 @@
 {
-  "name": "Wblearn Blog",
-  "short_name": "Wblearn Blog",
+  "name": "Louis Blog",
+  "short_name": "louis Blog",
   "description": "About an engineer & designer who loves web.",
   "icons": [{
-    "src": "icons/61.png",
+    "src": "icons/128.png",
     "sizes": "128x128",
     "type": "image/png"
   }, {
-    "src": "icons/61.png",
+    "src": "icons/512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
