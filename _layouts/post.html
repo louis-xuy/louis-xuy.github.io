@@ -3,12 +3,12 @@ layout: default
 ---
 
 <script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$']],
-    processEscapes: true
-  }
-};
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$']],
+            processEscapes: true
+        }
+    };
 </script>
 
 <!-- Image to hack wechat -->
@@ -24,34 +24,36 @@ MathJax = {
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
+            <!-- Post Container -->
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
                 <!-- Multi-Lingual -->
                 {% if page.multilingual %}
-                    {% include multilingual-sel.html %}
+                {% include multilingual-sel.html %}
                 {% endif %}
 
-				{{ content }}
+                {{ content }}
 
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
-                        <span>{{page.previous.title}}</span>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+                            data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                            Previous<br>
+                            <span>{{page.previous.title}}</span>
                         </a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
-                        <span>{{page.next.title}}</span>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
+                            data-placement="top" title="{{page.next.title}}">
+                            Next<br>
+                            <span>{{page.next.title}}</span>
                         </a>
                     </li>
                     {% endif %}
@@ -61,20 +63,30 @@ MathJax = {
                 {% if site.duoshuo_username %}
                 <!-- 多说评论框 start -->
                 <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="{{page.id}}"
-                        data-title="{{page.title}}"
-                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
+                    <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}"
+                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}">
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
                 {% endif %}
 
+                <!--PC和WAP自适应版-->
+                {% if site.changyan_id %}
+                <div id="SOHUCS" sid="<%= page.title %>"></div>
+                <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js"></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                        appid: 'cyvltPfUG',
+                        conf: 'b279931d9c30999cc5b6a05b499ea343'
+                    });
+                </script>
+                {% endif %}
 
-            </div>  
 
-    <!-- Side Catalog Container -->
-        {% if page.catalog %}
+            </div>
+
+            <!-- Side Catalog Container -->
+            {% if page.catalog %}
             <div class="
                 col-lg-2 col-lg-offset-0
                 visible-lg-block
@@ -88,44 +100,44 @@ MathJax = {
                     <ul class="catalog-body"></ul>
                 </div>
             </div>
-        {% endif %}
+            {% endif %}
 
-    <!-- Side Catalog Container -->
-    {% unless page.no-catalog %}
-    <div class="
+            <!-- Side Catalog Container -->
+            {% unless page.no-catalog %}
+            <div class="
         col-lg-2 col-lg-offset-0
         visible-lg-block
         sidebar-container
         catalog-container">
-        <div class="side-catalog">
-            <hr class="hidden-sm hidden-xs">
-            <h5>
-                <a class="catalog-toggle" href="#">CATALOG</a>
-            </h5>
-            <ul class="catalog-body"></ul>
-        </div>
-    </div>
-{% endunless %}
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            {% endunless %}
 
-<!-- Sidebar Container -->
-    <div class="
+            <!-- Sidebar Container -->
+            <div class="
         col-lg-8 col-lg-offset-2
         col-md-10 col-md-offset-1
         sidebar-container">
 
-        <!-- Featured Tags -->
-        {% include featured-tags.html bottom=true %}
+                <!-- Featured Tags -->
+                {% include featured-tags.html bottom=true %}
 
-        <!-- Friends Blog -->
-        {% include friends.html %}
+                <!-- Friends Blog -->
+                {% include friends.html %}
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </article>
 
 <!-- add support for mathjax by voleking-->
 {% if page.mathjax %}
-  {% include mathjax_support.html %}
+{% include mathjax_support.html %}
 {% endif %}
 
 
@@ -136,53 +148,43 @@ MathJax = {
     var _user = '{{site.duoshuo_username}}';
 
     // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
+    var duoshuoQuery = { short_name: _user };
+    (function () {
         var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
+        ds.type = 'text/javascript'; ds.async = true;
         ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
         ds.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 </script>
 <!-- 多说公共JS代码 end -->
 {% endif %}
 
 
-<!--PC和WAP自适应版-->
-{% if site.changyan_id %}
-<div id="SOHUCS" sid="<%= page.title %>" ></div>
-<script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-    appid: 'cyvltPfUG',
-    conf: 'b279931d9c30999cc5b6a05b499ea343'
-    });
-</script>
-{% endif %}
+
 
 
 {% if site.anchorjs %}
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js", function () {
         anchors.options = {
-          visible: 'hover',
-          placement: 'right',
-          // icon: '#'
+            visible: 'hover',
+            placement: 'right',
+            // icon: '#'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
@@ -190,11 +192,11 @@ MathJax = {
 <style>
     /* place left on bigger screen */
     @media all and (min-width: 800px) {
-        .anchorjs-link{
+        .anchorjs-link {
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
-            margin-top : -0.1em;
+            margin-top: -0.1em;
         }
     }
 </style>
