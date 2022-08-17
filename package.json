@@ -26,7 +26,10 @@
         "cafe": "git co gitcafe-pages; git merge master; git push gitcafe gitcafe-pages:gitcafe-pages --tag; git co master;"
     },
     "dependencies": {
+        "hexo": "^6.2.0",
+        "hexo-deployer-git": "^3.0.0",
         "hexo-generator-feed": "^3.0.0",
-        "hexo-renderer-markdown-it-plus": "^1.0.5"
+        "hexo-renderer-markdown-it-plus": "^1.0.5",
+        "hexo-renderer-pandoc": "^0.3.1"
     }
 }
