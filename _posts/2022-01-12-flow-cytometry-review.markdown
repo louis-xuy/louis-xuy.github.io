@@ -14,20 +14,21 @@ tags:
 
 ### 在数据的每个维度中应用Freedman Diaconis公式，以获得K-均值的聚类数K
 
-    \\
-    K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d
-    \\
-    其中$x_{(n)}^{j}$, $x_{(1)}^{j}$ 表示第j个维度的最大值和最小值。$x^j=\left(x^i_{1},x^j_{2} \text , \ldots, x^j_{n}\right)$.   
-    IQR（·）是数据的四分位范围，定义为第75百分位和第25百分位之间的差异 
-    $$
-    K=\left\lceil\operatorname{median}\left(K_{1}, \ldots, K_{d}\right)\right\rceil
-    $$  
+\\
+K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d
+\\
+其中$x_{(n)}^{j}$, $x_{(1)}^{j}$ 表示第j个维度的最大值和最小值。$x^j=\left(x^i_{1},x^j_{2} \text , \ldots, x^j_{n}\right)$.   
+IQR（·）是数据的四分位范围，定义为第75百分位和第25百分位之间的差异 
+$$
+K=\left\lceil\operatorname{median}\left(K_{1}, \ldots, K_{d}\right)\right\rceil
+$$
 
 ### 使用k-means++算法初始化最初的k个聚类种子, 
 
 ### 在Lloyd’s的k-means算法中应用k-d树数据表示，直到算法收敛  
-    Lloyd’s的k-means算法，即经典kmeans算法  
-    kd-tree（k-dimensional树的简称），是一种对k维空间中的实例点进行存储以便对其进行快速检索的树形数据结构
+
+Lloyd’s的k-means算法，即经典kmeans算法  
+kd-tree（k-dimensional树的简称），是一种对k维空间中的实例点进行存储以便对其进行快速检索的树形数据结构
 
 ### 进一步应用Hartingan-Wong k-Means算法来提高聚类的紧致性
     Hartingan-Wong k-Means算法与经典kmeans略有不同。 
