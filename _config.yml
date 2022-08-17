@@ -4,10 +4,21 @@ SEOTitle: Louis | Louis Blog
 header-img: img/home-bg-art.jpg
 email: 360138359@qq.com
 description: "@louis,不要让任何事情成为你不去学习的理由！"
-keyword: "louis, @louis, louis,louis Blog, 博客, 个人网站, 互联网"
+keyword: "louis, @louis, louis,louis Blog, 博客, 许江的博客，个人网站, 互联网， 算法， 机器学习，推荐算法"
 url: "https://jianglife.com/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: false
+weibo_username: louisxuy
+zhihu_username: louisxuy
+github_username: louisxuy
+twitter_username: louisxuy
+#facebook_username:  louisxuy
+#linkedin_username:  firstname-lastname-idxxxx
 
 
 # Build settings
@@ -15,6 +26,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 highlighter: rouge
 permalink: pretty
 paginate: 10
+
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
@@ -34,6 +46,36 @@ gems: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
+
+exclude:
+  [
+    "less",
+    "node_modules",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
+    "README.zh.md",
+  ]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN
+
+plugins: [jekyll-paginate]
+
+markdown: kramdown
+kramdown:
+  input: GFM # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+# Netease settings
+netease_comment: false
+
 
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
@@ -85,26 +127,8 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-sass:
-  sass_dir: /assets/_sass
-  style: :compressed
-collections:
-  videos:
-    output: true
-    permalink: /:path/
-defaults:
-  -
-    scope:
-      path: ''
-      type: posts
-    values:
-      layout: post
-  -
-    scope:
-      path: ''
-      type: videos
-    values:
-      layout: video
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: true
 
 # Friends
 #friends: [
