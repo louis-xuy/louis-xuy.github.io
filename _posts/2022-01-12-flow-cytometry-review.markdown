@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      "flowPeaks 算法过程"
-mathjax:    true
 subtitle:   ""
 date:       2021-12-31 00:00:00
 author:     "louis"
 header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.3
 catalog:    true
+mathjax:    true
 tags:
     - cluster
 ---
@@ -17,8 +17,10 @@ tags:
 $$
 K_{j}=\left(x_{(n)}^{j}-x_{(1)}^{j}\right) /\left\{2 \cdot \operatorname{IQR}\left(x^{j}\right) \cdot n^{-1 / 3}\right\} \text { for } j=1, \ldots, d
 $$
+
 其中$x_{(n)}^{j}$, $x_{(1)}^{j}$ 表示第j个维度的最大值和最小值。$x^j=\left(x^i_{1},x^j_{2} \text , \ldots, x^j_{n}\right)$.   
 IQR（·）是数据的四分位范围，定义为第75百分位和第25百分位之间的差异 
+
 $$
 K=\left\lceil\operatorname{median}\left(K_{1}, \ldots, K_{d}\right)\right\rceil
 $$
@@ -42,9 +44,11 @@ Hartingan-Wong k-Means算法与经典kmeans略有不同。
 - $w_k$ 样本比例，满足 $\sum^{K}_{k=1}w_k=1$
 - $\mu_k$ 样本均值， 
 - $\sum_k$ 样本方差，$\sum_k$ 噪音可能太多， 该文章采用了一种平滑的表示方法:  
+
 $$
 \tilde{\Sigma}_{k}=\lambda_{k} \cdot h \Sigma_{k}+\left(1-\lambda_{k}\right) \cdot h_{0} \Sigma_{0}
-$$  
+$$
+
 其中h和h0是定制的参数，调整后可使密度函数更平滑或粗糙  
 $ \lambda_{k}=nw_{k}/\left(k+nw_{k}\right) $,   
 $ \Sigma_{0} $ 是一个方差矩阵，假设数据在整个数据范围内均匀分布，并且是一个对角线矩阵，对于元素(j,j)有: $ \Sigma^{jj}_{0}=\{(x^j_{(n)}-x^{j}_{(1)})/k^{1/d}\}^2  \text { for }j=1, \ldots, d $ 
