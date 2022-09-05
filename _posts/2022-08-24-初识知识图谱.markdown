@@ -107,7 +107,7 @@ $$h_{\perp} = h-w_{r}^{T}hw_{r}, t_{\perp}=t-w_{r}^{T}hw_{r}, f_{r}{(h,t)}=-\lef
   - **TransM:** 放低了TransE的$h+r=t$的要求，提高模型性能，为每个事实分配特定的关系权重，通过对1-N,N-1,N-N分配较低的权重，TransM使t在复杂关系中离h+r更远，
     $$f_{r}(h,t)=-\theta_{r} \left \| h+r-t \right\|_{1/2}$$
     
-  - **MianfoldE:** 将$h+r\thickapprox t $放宽到$\left \| h+r-t \right\|_{2}^{2} \thickapprox \theta_{2}^{2}$, scoring functions 
+  - **MianfoldE:** 将$h+r\thickapprox t$放宽到$\left \| h+r-t \right\|_{2}^{2} \thickapprox \theta_{2}^{2}$, scoring functions 
     $$f_{r}{(h,t)}=-(\left \| h+r-t \right\|_{2}^{2} - \theta_{2}^{2})^{2}$$
 
   - **TransF:** 也是放低了TransE的$h+r=t$的要求, 只要求h+r的方向和t的方向一致，同时t-r的方向和h的方向也一致，scoring functions：
