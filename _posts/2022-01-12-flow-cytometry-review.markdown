@@ -42,8 +42,7 @@ Hartingan-Wong k-Means算法与经典kmeans略有不同。
 - $\sum_k$ 样本方差，$\sum_k$ 噪音可能太多， 该文章采用了一种平滑的表示方法:  
 
 $$
-\tilde{\Sigma}_{k}=\lambda_{k} \cdot h \Sigma_{k}+\left(1-\lambda_{k}\right) \cdot h_{0} \Sigma_{0}
-$$
+\tilde{\Sigma}_{k}=\lambda_{k} \cdot h \Sigma_{k}+\left(1-\lambda_{k}\right) \cdot h_{0} \Sigma_{0}$$
 
 其中h和h0是定制的参数，调整后可使密度函数更平滑或粗糙  
 $ \lambda_{k}=nw_{k}/\left(k+nw_{k}\right) $,   
