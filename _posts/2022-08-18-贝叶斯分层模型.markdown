@@ -18,7 +18,7 @@ tags:
 
 ### 线性回归模型
 
-回归分析的目的是估计响应变量y和输入变量X之间的关系。给定一组观察数据$\{(xi，yi)\}_{i=1}^N$，回归模型具有形式：
+在介绍贝叶斯分层模型之前，我们先回顾一下线性回归模型。回归分析的目的是估计响应变量y和输入变量X之间的关系。给定一组观察数据$\{(xi，yi)\}_{i=1}^N$，回归模型具有形式：
 $$
 \begin{aligned}
 y_i = f(x_i)+\epsilon_i, i=1,...,n
@@ -29,20 +29,21 @@ $$
 
 ### 分段贝叶斯回归
 
-令F由几个较低阶多项式函数组成，每个函数在X的不同子间隙（局部）上定义，即邻域内的输入点共享相同的功能形式。这些分段多项式函数被连接在一起，以产生光滑的复合函数，并且函数属于连续函数。该定义可以紧凑为：
+令F由几个较低阶多项式函数组成，每个函数在X的不同子空间（局部）上定义，即邻域内的输入点共享相同的功能形式。这些分段多项式函数被连接在一起，以产生光滑的复合函数，并且函数属于连续函数。该定义可以紧凑为：
 
 $$
 f(x_i)=\sum_{k=1}^{K}\phi_k(x_i)\beta_k
 $$
 
-每一个$\phi_K$表示一个基本函数，$\beta_k$是函数$phi_k$的系数，是一个未知参数。
-分段函数， k值得选择也会对模型拟合效果有比较大的影响，通过下图可以很明显的看出来
-![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/层次贝叶斯模型/knots.png)
+每一个$\phi_K$表示一个基本函数，$\beta_k$是函数$phi_k$的系数，是一个未知参数。形式化表示如下。
 
-基础函数有不同的选择， 其中3次B-Spline是一种比较常见的函数。3次B-Spline函数的定义如下图所示：
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/层次贝叶斯模型/b-spline-0.png)
 
-图形展示如下
+在上面的公式中，有两个重要的参数，分段的数量K， 已经参数d。下图展示了不同的分段数量下曲线的差异
+![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/层次贝叶斯模型/knots.png)
+
+
+基础函数有不同的选择， 其中3次B-Spline是一种比较常见的函数。3次B-Spline函数的定义如下图所示：
 ![](https://raw.githubusercontent.com/louis-xuy/louis-xy.github.io/master/img/in-post/层次贝叶斯模型/b-spline.png)
 
 
