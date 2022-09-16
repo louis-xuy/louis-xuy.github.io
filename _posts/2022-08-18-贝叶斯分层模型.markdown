@@ -7,6 +7,7 @@ author:     "louis"
 header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.3
 catalog:    true
+mathjax:    true
 tags:
     - Bayesian, Hierarchical Models
 ---
@@ -52,11 +53,15 @@ $$f(x_i)=\sum_{k=1}^{K}\phi_k(x_i)\beta_k$$
 
 考虑L级层次组织，统一层级具有相似的属性。记$i^{th}$下观察数据$x^i$的属性${c_i^1,...c_i^l...c_I^L}$，其中$c_i^l \in \mathbb{Z}^+$表示观察值的级别l的索引。令层级索引的数量$l$为$N^l$，$n^l$表示该组的索引为$l$。例如，我们可能具有三个级别$（L = 3）$，底部级别$（l = 1）$包含来自同一学校，下一个级别$（L = 2）$包含来自统一城市和最高级别$（ l = 3）$包含具有相同国家的数据。值$c_i^{l = 2} = n^{l = 2} = 4$ 表示观察数据i属于城市4。据此，响应$y_i$具有形式：
 $$
+\begin{aligned}
 y_i=\sum_{k=1}^K \phi_k\left(x_i\right) \beta_k^{1, c_i^1}+\epsilon_i
+\end{aligned}
 $$
 其中K表示基础函数的数量，${\phi_1...\phi_K}$这些基础函数共享所有数据。系数${\beta_1...\beta_K}$在每一层级的每一组都有不同的值。第l层的第$k^{th}$系数的计算如下
 $$
+\begin{aligned}
 \beta_k^{l, n^l}=\beta_k^{l+1, n^{l+1}}+\xi_k^{l, n^l}
+\end{aligned}
 $$
 
 最终用贝叶斯网络图来表示整个模型结构如下所示：
@@ -71,7 +76,9 @@ $$
 有时候我们需要对样本的观察给与不同的重视程度，在证券交易中，交易规模，交易日期距离是否接近当前。在建模的时候有必要对观测数据进行甲醛，并将样本权重作为回归模型的一部分。
 
 $$
+\begin{aligned}
 y_i \sim N\left( \phi(x_i)\beta^{1,c_i^l}, \delta^2/w_i \right)
+\end{aligned}
 $$
 
 不同的样本具有不一样的方差，这样减少了不重要的样本对模型参数预估的影响
