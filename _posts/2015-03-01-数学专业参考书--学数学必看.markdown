@@ -1,3 +1,18 @@
+---
+layout:     post
+title:      "数学专业参考书--学数学必看"
+subtitle:   ""
+date:       2022-08-18 00:00:00
+author:     "louis"
+header-img: "img/post-bg-rwd.jpg"
+header-mask: 0.3
+catalog:    true
+mathjax:    true
+keywords: 数学书，参考书，高等数学参考书，大学数学, 高等数学
+tags:
+    - 数学
+---
+
 学数学要多看书，但是初学者很难知道那些书好，我从网上收集并结合自己的经验进行了整理:
 
 从《数学分析》开始讲起：  
